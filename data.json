@@ -1,0 +1,16 @@
+{
+	"nav": ["About us", "Roadmap", "Documents", "F.A.Q."],
+	"balance": [
+		{
+			"icon": "images/header/1.png",
+			"text": "CHEEL",
+			"num": "8,00"
+		},
+		{
+			"icon": "images/header/2.png",
+			"text": "LEE",
+			"num": "8,00"
+		}
+	],
+	"selectLang": ["EN", "RU"]
+}

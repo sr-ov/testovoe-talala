@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+body {
+	color: var(--dark);
+	font: var(--text1);
+	// font-family: var(--ff1);
+}
+
+.wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	&__main {
+		flex: 1;
+	}
+}
+
+.container {
+	max-width: var(--container-max-width);
+	margin: 0 auto;
+	padding: 0 var(--container-padding);
+
+	&_2 {
+		max-width: var(--container-max-width2);
+	}
+}

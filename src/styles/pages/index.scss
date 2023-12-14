@@ -1,0 +1,155 @@
+@use '../reset';
+@use '../vars';
+@use '../global';
+/* =========================================== */
+
+/* === header === */
+.header {
+	background-color: var(--c5);
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: 114px;
+	}
+	&__logo {
+		padding: 20px 0;
+	}
+	&__center {
+		display: flex;
+		align-items: center;
+		gap: 36px;
+	}
+	&__nav {
+	}
+	&__buy {
+		color: var(--c2);
+		font: var(--text1-2);
+	}
+	&__right {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+	&__balance {
+		display: flex;
+		gap: 20px;
+	}
+	&__audited {
+		padding: 12px 22px;
+		border-radius: var(--bdrs2);
+		background-color: var(--c4);
+		line-height: 0;
+	}
+	&__select-lang {
+	}
+}
+/* === /header === */
+
+/* === nav === */
+.nav {
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 36px;
+	}
+	&__item {
+	}
+	&__link {
+		padding: 30px 0;
+		color: var(--c3);
+		font: var(--text1);
+		transition: color 0.2s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--c1);
+			}
+		}
+	}
+}
+/* === /nav === */
+
+/* === balance === */
+.balance {
+	display: grid;
+	grid-template-areas:
+		'ic txt txt'
+		'ic num ar';
+	gap: 0 5px;
+	&__icon {
+		grid-area: ic;
+		align-self: center;
+	}
+	&__text {
+		grid-area: txt;
+		font: var(--text2);
+		color: var(--c8);
+	}
+	&__num {
+		grid-area: num;
+		font: var(--text1-2);
+		color: var(--c6);
+	}
+	&__arrow {
+		grid-area: ar;
+		align-self: center;
+		margin-top: -3px;
+	}
+}
+/* === /balance === */
+
+/* === select-lang === */
+.select-lang {
+	position: relative;
+	@media (any-hover: hover) {
+		&:hover &__btn,
+		&:hover &__btn .select-lang__btn-arrow {
+			color: var(--c1);
+		}
+		&:hover &__list {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&__btn {
+		padding: 20px 0;
+		display: flex;
+		align-items: center;
+		gap: 7px;
+	}
+	&__btn,
+	&__opt {
+		font: var(--text1);
+		color: var(--c3);
+		transition: color 0.2s ease-in-out;
+	}
+	&__btn-arrow {
+	}
+	&__list {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		transform: translate(0, 100%);
+		width: 100%;
+		background-color: var(--c5);
+		opacity: 0;
+		visibility: hidden;
+		transition-property: opacity, visibility;
+		transition-duration: 0.2s;
+		transition-timing-function: ease-in-out;
+		border-radius: 4px;
+	}
+	&__item {
+	}
+	&__opt {
+		padding: 4px;
+		width: 100%;
+		text-align: left;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--c1);
+			}
+		}
+	}
+}
+/* === /select-lang === */

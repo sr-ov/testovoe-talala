@@ -1,0 +1,50 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(href=require('./styles/pages/index.scss'), rel="stylesheet")
+		title Document
+	body
+		.wrapper
+			header.header
+				.header__container.container
+					a.header__logo.logo(href="/")
+						img.logo__img(src=require("./images/logo.svg") alt="Site logo" height="58" width="92")
+					.header__center
+						nav.header__nav.nav
+							ul.nav__list
+								each text in nav
+									li.nav__item
+										a.nav__link(href="/")
+											| #{text}
+						a.header__buy(href="/") Buy NFT glasses
+					.header__right
+						.header__balance
+							each b in balance
+								.balance__item.balance
+									img.balance__icon(src=require(b.icon) alt="" aria-hidden="true" height="30" width="30")
+									span.balance__text
+										| #{b.text}
+									span.balance__num
+										| #{b.num}
+									svg.balance__arrow(height="5" width="7")
+										use(xlink:href="#arrow1")
+						a.header__audited(href="/")
+							svg.header__audited-icon(height="34" width="132")
+								use(xlink:href="#header1")
+						.header__select-lang.select-lang
+							button.select-lang__btn
+								| EN
+								svg.select-lang__btn-arrow(height="5" width="10")
+									use(xlink:href="#arrow2")
+							ul.select-lang__list
+								each text in selectLang
+									li.select-lang__item
+										button.select-lang__opt
+											| #{text}
+
+
+			main.wrapper__main.main
+			footer.footer
+	include ./icons/sprite.svg

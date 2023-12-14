@@ -1,0 +1,56 @@
+:root {
+	/* === color === */
+	--c1: #fcfcfd;
+	--c2: #01ffc2;
+	--c3: #5e636e;
+	--c4: rgba(113, 86, 253, 0.2);
+	--c5: #140132;
+	--c6: #fff;
+	--c7: #7156fb;
+	--c8: #e5f7ff;
+	/* === /color === */
+
+	--gradient1: linear-gradient(180deg, var(--c7) 0%, #ff0dff 100%);
+
+	--bdrs-full: 9999px;
+	--bdrs1: 20px;
+	--bdrs2: 30px;
+	--bdrs3: 40px;
+
+	--fz1: 16px;
+	--ff1: Montserrat, sans-serif;
+	--ff2: 'SF Pro Text', sans-serif;
+
+	/* === title === */
+	--title1: 56px / 130% var(--ff1);
+	--title1-2: 900 var(--title1);
+	--title2: 72px / 130% var(--ff1);
+	--title2-2: 900 var(--title2);
+	/* === /title === */
+
+	/* === text === */
+	--text1: 16px / 130% var(--ff1);
+	--text1-2: 700 var(--text1);
+
+	--text2: 8px / 130% var(--ff1);
+
+	--text3: 26px / 146% var(--ff1);
+	--text3-2: 700 var(--text3);
+
+	--text4: 20px / 140% var(--ff1);
+	--text4-2: 700 var(--text4);
+
+	--text4: 18px / 183% var(--ff1);
+	--text4-2: 700 var(--text4);
+	/* === /text === */
+
+	--container-width: 1352px;
+	--container-width2: 1122px;
+	--container-padding: 20px;
+	--container-max-width: calc(
+		var(--container-width) + (var(--container-padding) * 2)
+	);
+	--container-max-width2: calc(
+		var(--container-width2) + (var(--container-padding) * 2)
+	);
+}
