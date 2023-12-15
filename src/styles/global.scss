@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 body {
-	color: var(--dark);
+	color: var(--c1);
 	font: var(--text1);
-	// font-family: var(--ff1);
+	background-color: var(--c5);
 }
 
 .wrapper {
@@ -24,4 +24,19 @@ body {
 	&_2 {
 		max-width: var(--container-max-width2);
 	}
+}
+
+.d-none {
+	display: none !important;
+}
+
+.txt {
+}
+.txt_accent,
+.txt__accent {
+	color: var(--c2);
+}
+.txt_b,
+.txt__b {
+	font-weight: 700;
 }

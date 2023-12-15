@@ -10,7 +10,11 @@
 	--c8: #e5f7ff;
 	/* === /color === */
 
-	--gradient1: linear-gradient(180deg, var(--c7) 0%, #ff0dff 100%);
+	--gradient1: linear-gradient(
+		180deg,
+		rgba(113, 86, 251, 20%) 0%,
+		rgba(255, 13, 255, 20%) 100%
+	);
 
 	--bdrs-full: 9999px;
 	--bdrs1: 20px;
@@ -42,6 +46,9 @@
 
 	--text4: 18px / 183% var(--ff1);
 	--text4-2: 700 var(--text4);
+
+	--text5: 100px / 80% var(--ff1);
+	--text5-2: 900 var(--text5);
 	/* === /text === */
 
 	--container-width: 1352px;

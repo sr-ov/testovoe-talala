@@ -3,7 +3,7 @@ html(lang="en")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		link(href=require('./styles/pages/index.scss'), rel="stylesheet")
+		link(href=require('./styles/pages/index.scss') rel="stylesheet")
 		title Document
 	body
 		.wrapper
@@ -46,5 +46,113 @@ html(lang="en")
 
 
 			main.wrapper__main.main
+				section.hero(style=`background: no-repeat url(${require('./images/hero/1.jpg')}) center / contain;`)
+					.container
+						.hero__content
+							.hero__left
+								h1.hero__title
+									| GameFi
+									| short video
+									span.hero__title-accent platform
+									span.hero__title-sub Watch. Play. Earn
+								a(href="/").hero__google-play
+									.click-icon
+										svg.click-icon__icon(height="40" width="40")
+											use(xlink:href="#google-play")
+									| Pre-registration in Google Play
+							.hero__right
+								ul.hero__list
+									- const len = Array.from({ length: 6 });
+									each _, i in len
+										li.hero__item
+											a.hero__link.click-icon(href="#")
+												svg.click-icon__icon(height="40" width="40")
+													use(xlink:href=`#social${i + 1}`)
+
+				section.mission
+					.container.container_2
+						h2.mission__title.txt
+							span.txt_accent Cheelee’s
+							| mission
+						.mission__text.txt
+							p Users spend an average of 2.5 hours daily on social networks and get nothing fоr it. We believe that this is unfair
+							p
+								span.txt__b Our mission
+								| is to provide everyone with the opportunity to monetize time in social networks
+						p.mission__sub.txt
+							span.txt__accent Cheelee
+							|  works within the "Attention Economy" framework
+						.mission__text.mission__text_mb.mission__text_sm.txt
+							p Other social media consider a user as an information and advertising influence target,
+								span.txt__b  but a Cheelee user is a full system member, partner and beneficiary
+							p
+								span.txt__b The Attention Economy
+								|  sees human attention as a scarce commodity making it a new oil! The founder of this concept is the Nobel laureate Herbert Simon
+							p The main idea is that attention is converted into income with digital platforms. You pay your attention to what you want, and get paid for it. Your attention has a certain cost.
+							p Through the GameFi mechanics, Cheelee’s users earn together with the platform by converting their attention into money
+
+						.steps
+							ul.steps__list
+								li.steps__img
+									img(src=require('./images/mission/1.jpg') alt="" aria-hidden="true")
+								li.steps__item.step
+									.step__title.txt.txt_b Sign-up and get your
+										span.txt__accent  free NFT glasses
+								li.steps__item.step
+									.step__title.txt.txt_b Watch the feed and get the boxes
+										span.txt__accent  with LEE tokens
+								li.steps__item.step
+									.step__title.txt.txt_b Buy your NFT glasses and
+										span.txt__accent  get LEE tokens
+										|  directly when watching the feed
+									.step__desc The higher the rarityof your NFT glasses, the more points you get when leveling themup – the more tokens you can earn
+										img.step__decor(src=require('./images/mission/2.png') height="97" width="103" alt="" aria-hidden="true")
+								li.steps__item.step
+									.step__title.txt.txt_b Upgrade your
+										span.txt__accent  NFT glasses
+								li.steps__item.step
+									.step__title.txt.txt_b
+										span.txt__accent  Buy additional NFT
+										|  glasses to increase the amount of Attention and rewarded time of watching the feed
+									.step__desc.txt.txt_b 1 Attention =
+										span.txt__b 10 minutes
+										| of rewarded feed viewing
+
+				section.boxes
+					.container.container_2
+						.boxes__content
+							.boxes__left
+								h2.boxes__title.txt Watch the videos and
+									span.txt__accent  get the boxes
+								p.boxes__desc While watching the feed you can get boxeswith NFT or LEE tokens
+							img.boxes__img(src=require('./images/boxes/1.png') alt="" aria-hidden="true" height="306" width="423")
+
+				section.presale
+					.container.presale__container
+						- const arrowsCount = Array.from({ length: 3 })
+						.presale__arrows1.anim-arrows
+							each _, i in arrowsCount
+								svg(class=`anim-arrows__${i + 1}` height="18" width="12")
+									use(xlink:href="#arrow3")
+						.presale__arrows2.anim-arrows
+							each _, i in arrowsCount
+								svg(class=`anim-arrows__${i + 1}` height="18" width="12")
+									use(xlink:href="#arrow3")
+
+						.container.container_2
+							.presale__content
+								.presale__text.txt Don’t miss the
+									span.txt__accent  Presale
+								a.presale__link(href="/") Buy NFT glasses
+
+				section.product(style=`background: no-repeat url(${require('./images/product/1.jpg')}) 70% center / contain;`)
+					.container.container_2
+						.product__text
+							.product__title.txt Cheelee team has
+								span.txt__accent  already launched product
+							.product__desc The project is based on the already launched in 2021 short video platform – NUTSon (1.5M users, 33% engagement rate and 15K videos created daily)
+
+
+
 			footer.footer
 	include ./icons/sprite.svg
