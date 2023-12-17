@@ -254,30 +254,34 @@
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-areas:
-			'c1 c2 c3'
-			'im im c3';
-		gap: 0 100px;
+		// grid-template-areas:
+		// 	'c1 c2 c3'
+		// 	'im im c3';
+		gap: 60px 100px;
 		counter-reset: section;
 	}
 
 	&__item:first-child {
-		grid-area: c1;
+		// grid-area: c1;
 	}
 	&__item:nth-child(2) {
-		grid-area: c2;
+		// grid-area: c2;
 	}
 	&__img {
-		grid-area: im;
+		// grid-area: im;
 	}
 	&__item:nth-child(n + 3) {
-		grid-area: c3;
+		// grid-area: c3;
+		grid-column: 3 / -1;
 	}
 }
 /* === /steps === */
 
 /* === step === */
 .step {
+	display: grid;
+	gap: 10px 0;
+	align-content: start;
 	&::before {
 		counter-increment: section;
 		content: counter(section);
@@ -285,10 +289,15 @@
 		color: var(--c4);
 	}
 	&__title {
+		font: var(--text3-2);
 	}
 	&__desc {
+		font: var(--text4);
+		display: flex;
+		gap: 5px;
 	}
 	&__decor {
+		flex-shrink: 0;
 	}
 }
 /* === /step === */
@@ -325,15 +334,63 @@
 	&__arrows1,
 	&__arrows2 {
 		position: absolute;
-
-		left: 0;
 		z-index: 1;
+		width: 76px;
 	}
 	&__arrows1 {
 		top: 0;
+		left: 25%;
+		translate: 0 -50%;
 	}
 	&__arrows2 {
 		bottom: 0;
+		right: 25%;
+		translate: 0 50%;
+		rotate: 180deg;
+	}
+	&__arrows1-wrapper,
+	&__arrows2-wrapper {
+		position: relative;
+		line-height: 0;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+		}
+		&::before {
+			border: 1px dashed #28125b;
+			top: 50%;
+			left: 0;
+			width: 200px;
+			height: 1px;
+			transform: translate(-100%, -50%);
+		}
+		&::after {
+			bottom: 0;
+			left: 50%;
+			z-index: -1;
+			width: 100%;
+			height: 50%;
+			translate: -50% -1px;
+		}
+	}
+	&__arrows1-wrapper {
+		--c: #28125b;
+		&::before {
+			border: 1px dashed var(--c);
+		}
+		&::after {
+			background-color: var(--c);
+		}
+	}
+	&__arrows2-wrapper {
+		--c: #43045b;
+		&::before {
+			border: 1px dashed var(--c);
+		}
+		&::after {
+			background-color: var(--c);
+		}
 	}
 	&__content {
 		display: flex;
@@ -351,16 +408,24 @@
 		background-color: var(--c7);
 		padding: 28px 40px;
 		line-height: 1;
+		transition: scale 0.2s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				scale: 1.08;
+			}
+		}
 	}
 }
 /* === /presale === */
 
 /* === anim-arrows === */
 .anim-arrows {
+	display: flex;
+	justify-content: center;
 	&__1 {
 		animation: animArrow 1s 0.6s linear infinite;
+		position: relative;
 	}
-
 	&__2 {
 		animation: animArrow 1s 0.2s linear infinite;
 	}

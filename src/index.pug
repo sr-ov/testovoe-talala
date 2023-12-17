@@ -92,9 +92,7 @@ html(lang="en")
 							p Through the GameFi mechanics, Cheelee’s users earn together with the platform by converting their attention into money
 
 						.steps
-							ul.steps__list
-								li.steps__img
-									img(src=require('./images/mission/1.jpg') alt="" aria-hidden="true")
+							ul.steps__list(style=`background: no-repeat url(${require('./images/mission/1.jpg')}) left bottom / 723px 889px;`)
 								li.steps__item.step
 									.step__title.txt.txt_b Sign-up and get your
 										span.txt__accent  free NFT glasses
@@ -105,7 +103,8 @@ html(lang="en")
 									.step__title.txt.txt_b Buy your NFT glasses and
 										span.txt__accent  get LEE tokens
 										|  directly when watching the feed
-									.step__desc The higher the rarityof your NFT glasses, the more points you get when leveling themup – the more tokens you can earn
+									.step__desc
+										.step__desc-text The higher the rarityof your NFT glasses, the more points you get when leveling themup – the more tokens you can earn
 										img.step__decor(src=require('./images/mission/2.png') height="97" width="103" alt="" aria-hidden="true")
 								li.steps__item.step
 									.step__title.txt.txt_b Upgrade your
@@ -114,9 +113,10 @@ html(lang="en")
 									.step__title.txt.txt_b
 										span.txt__accent  Buy additional NFT
 										|  glasses to increase the amount of Attention and rewarded time of watching the feed
-									.step__desc.txt.txt_b 1 Attention =
-										span.txt__b 10 minutes
-										| of rewarded feed viewing
+									.step__desc.txt
+										.step__desc-text 1 Attention =
+											span.txt__b  10 minutes
+											|  of rewarded feed viewing
 
 				section.boxes
 					.container.container_2
@@ -130,14 +130,16 @@ html(lang="en")
 				section.presale
 					.container.presale__container
 						- const arrowsCount = Array.from({ length: 3 })
-						.presale__arrows1.anim-arrows
-							each _, i in arrowsCount
-								svg(class=`anim-arrows__${i + 1}` height="18" width="12")
-									use(xlink:href="#arrow3")
-						.presale__arrows2.anim-arrows
-							each _, i in arrowsCount
-								svg(class=`anim-arrows__${i + 1}` height="18" width="12")
-									use(xlink:href="#arrow3")
+						.presale__arrows1
+							.presale__arrows1-wrapper.anim-arrows
+								each _, i in arrowsCount
+									svg(class=`anim-arrows__${i + 1}` height="18" width="12")
+										use(xlink:href="#arrow3")
+						.presale__arrows2
+							.presale__arrows2-wrapper.anim-arrows
+								each _, i in arrowsCount
+									svg(class=`anim-arrows__${i + 1}` height="18" width="12")
+										use(xlink:href="#arrow3")
 
 						.container.container_2
 							.presale__content
