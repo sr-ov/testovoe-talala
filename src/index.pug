@@ -46,7 +46,7 @@ html(lang="en")
 
 
 			main.wrapper__main.main
-				section.hero(style=`background: no-repeat url(${require('./images/hero/1.jpg')}) center / contain;`)
+				section.hero(style=`background: no-repeat url(${require('./images/hero/1.jpg')}) center / contain; background-image: -webkit-image-set(url(${require('./images/hero/1.jpg')}) 1x, url(${require('./images/hero/1@3x.jpg')}) 3x);`)
 					.container
 						.hero__content
 							.hero__left
@@ -92,7 +92,7 @@ html(lang="en")
 							p Through the GameFi mechanics, Cheelee’s users earn together with the platform by converting their attention into money
 
 						.steps
-							ul.steps__list(style=`background: no-repeat url(${require('./images/mission/1.jpg')}) left bottom / 723px 889px;`)
+							ul.steps__list(style=`background: no-repeat url(${require('./images/mission/1.jpg')}) left bottom / 723px 889px; background-image: -webkit-image-set(url(${require('./images/mission/1.jpg')}) 1x, url(${require('./images/mission/1@3x.jpg')}) 3x);`)
 								li.steps__item.step
 									.step__title.txt.txt_b Sign-up and get your
 										span.txt__accent  free NFT glasses
@@ -105,7 +105,7 @@ html(lang="en")
 										|  directly when watching the feed
 									.step__desc
 										.step__desc-text The higher the rarityof your NFT glasses, the more points you get when leveling themup – the more tokens you can earn
-										img.step__decor(src=require('./images/mission/2.png') height="97" width="103" alt="" aria-hidden="true")
+										img.step__decor(src=require('./images/mission/2.png') srcset=`${require('./images/mission/2@3x.png')} 3x` height="97" width="103" alt="" aria-hidden="true")
 								li.steps__item.step
 									.step__title.txt.txt_b Upgrade your
 										span.txt__accent  NFT glasses
@@ -125,7 +125,7 @@ html(lang="en")
 								h2.boxes__title.txt Watch the videos and
 									span.txt__accent  get the boxes
 								p.boxes__desc While watching the feed you can get boxeswith NFT or LEE tokens
-							img.boxes__img(src=require('./images/boxes/1.png') alt="" aria-hidden="true" height="306" width="423")
+							img.boxes__img(src=require('./images/boxes/1.png') srcset=`${require('./images/boxes/1@3x.png')} 3x` alt="" aria-hidden="true" height="306" width="423")
 
 				section.presale
 					.container.presale__container
@@ -147,7 +147,7 @@ html(lang="en")
 									span.txt__accent  Presale
 								a.presale__link(href="/") Buy NFT glasses
 
-				section.product(style=`background: no-repeat url(${require('./images/product/1.jpg')}) 70% center / contain;`)
+				section.product(style=`background: no-repeat url(${require('./images/product/1.jpg')}) 70% center / contain; background-image: -webkit-image-set(url(${require('./images/product/1.jpg')}) 1x, url(${require('./images/product/1@3x.jpg')}) 3x);`)
 					.container.container_2
 						.product__text
 							.product__title.txt Cheelee team has
