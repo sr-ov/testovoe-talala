@@ -254,24 +254,10 @@
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		// grid-template-areas:
-		// 	'c1 c2 c3'
-		// 	'im im c3';
 		gap: 60px 100px;
 		counter-reset: section;
 	}
-
-	&__item:first-child {
-		// grid-area: c1;
-	}
-	&__item:nth-child(2) {
-		// grid-area: c2;
-	}
-	&__img {
-		// grid-area: im;
-	}
 	&__item:nth-child(n + 3) {
-		// grid-area: c3;
 		grid-column: 3 / -1;
 	}
 }
